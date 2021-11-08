@@ -11,15 +11,11 @@ public class CameraMove : MonoBehaviour
 	[SerializeField] Camera cam;
 
 	public bool cutscene = true;
-	public bool disabled = false;
 	[SerializeField] float camSpeed = 15f;
 
 	// Update is called once per frame
     void Update()
-    {
-		if(disabled)
-			return;
-		
+    {	
 		if(cutscene)
 		{
 			transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + Time.deltaTime * camSpeed ,transform.rotation.eulerAngles.z);

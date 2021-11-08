@@ -74,7 +74,7 @@ public class GameController : MonoBehaviour
 		Time.timeScale = 0f;
 		pauseMenu.SetActive(true);
 		
-		camMove.disabled = true;
+		cam.disabled = true;
 		
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
 		pauseMenu.SetActive(false);
 		Time.timeScale = 1f;
 		
-		camMove.disabled = false;
+		cam.disabled = false;
 		
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;

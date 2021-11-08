@@ -23,6 +23,8 @@ public class PlayerCamera : MonoBehaviour
 	public float fov;
 	public float initRot = 0f;
 	
+	public bool disabled = false;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,8 @@ public class PlayerCamera : MonoBehaviour
 				fov = 105f;
 		}
 		
-        getInput();
+		if(!disabled)
+			getInput();
 		
 		cam.localRotation = Quaternion.Euler(xRotation, 0, 0);
 		orientation.rotation = Quaternion.Euler(0, yRotation + initRot, 0);
