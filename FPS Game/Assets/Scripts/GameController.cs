@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -89,5 +90,11 @@ public class GameController : MonoBehaviour
 		
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+	}
+	
+	public void ExitLevel()
+	{
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("Main Menu");
 	}
 }

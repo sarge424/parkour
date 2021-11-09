@@ -2439,6 +2439,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1166891197670973029, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 49075760}
+    - target: {fileID: 1166891197670973029, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 7709609126336065988, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
       propertyPath: m_Name
       value: InGameCanvas
@@ -2528,12 +2536,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 49075760}
     - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
+      value: ExitLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709609126938223351, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf869e3332eee8438d86aecbcf82983, type: 3}
