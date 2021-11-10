@@ -40,8 +40,11 @@ public class Wallrun : MonoBehaviour
 	
 	void CheckWall()
 	{
-		wallLeft = Physics.Raycast(transform.position, -orientation.right, out leftHit, wallDist);
-		wallRight = Physics.Raycast(transform.position, orientation.right, out rightHit, wallDist);
+		//rotating to get right
+		Vector3 planeVel = new Vector3(rb.velocity.z, 0, -rb.velocity.x);
+		
+		wallLeft = Physics.Raycast(transform.position, -planeVel, out leftHit, wallDist);
+		wallRight = Physics.Raycast(transform.position, planeVel, out rightHit, wallDist);
 	}
 	
 	void Update()
@@ -78,9 +81,15 @@ public class Wallrun : MonoBehaviour
 		rb.AddForce(Vector3.down * wallrunGravity, ForceMode.Acceleration);
 		
 		if(wallLeft)
+		{
 			tilt = Mathf.Lerp(tilt, -cameraTilt, cameraTiltTime * Time.deltaTime);
+			rb.velocity -= leftHit.normal * Vector3.Dot(rb.velocity, leftHit.normal);
+		}
 		else if(wallRight)
+		{		
 			tilt = Mathf.Lerp(tilt, cameraTilt, cameraTiltTime * Time.deltaTime);
+			rb.velocity -= rightHit.normal * Vector3.Dot(rb.velocity, rightHit.normal);
+		}
 		
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
