@@ -51,7 +51,7 @@ public class Wallrun : MonoBehaviour
     {
         CheckWall();
 		
-		if(CanWallRun() && ForwardSpeed() > 6)
+		if(CanWallRun() && rb.velocity.magnitude > 6)
 		{
 			if(wallLeft)
 			{
@@ -73,6 +73,8 @@ public class Wallrun : MonoBehaviour
 		{
 			StopWallrun();
 		}
+		
+		Debug.Log(wallrunning);
     }
 	
 	void StartWallrun()
@@ -113,9 +115,5 @@ public class Wallrun : MonoBehaviour
 	{
 		rb.useGravity = true;
 		tilt = Mathf.Lerp(tilt, 0, cameraTiltTime * Time.deltaTime);
-	}
-	float ForwardSpeed()
-	{
-		return Vector3.Dot(orientation.forward.normalized, rb.velocity);
 	}
 }

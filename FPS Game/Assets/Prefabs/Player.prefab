@@ -200,7 +200,7 @@ MonoBehaviour:
   maxSpeed: 8
   dragValue: 10
   jumpForce: 10
-  airSpeed: 4
+  airSpeed: 6
   maxAirSpeed: 20
   rb: {fileID: 0}
   isGrounded: 0
@@ -221,6 +221,7 @@ MonoBehaviour:
   orientation: {fileID: 7348688911157076051}
   fov: 0
   initRot: 0
+  disabled: 0
 --- !u!114 &7348688911271552929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,8 +238,8 @@ MonoBehaviour:
   cameraTilt: 15
   cameraTiltTime: 10
   wallDist: 0.6
-  minJumpHeight: 2
-  wallrunGravity: 1
+  minJumpHeight: 3
+  wallrunGravity: 2
   walljumpForce: 2000
   wallLeft: 0
   wallRight: 0
