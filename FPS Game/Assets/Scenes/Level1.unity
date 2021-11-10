@@ -3139,10 +3139,6 @@ PrefabInstance:
       propertyPath: gc
       value: 
       objectReference: {fileID: 49075760}
-    - target: {fileID: 7348688911271552936, guid: 24606f481b2410846946c3d5d77cc586, type: 3}
-      propertyPath: airSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7348688911271552937, guid: 24606f481b2410846946c3d5d77cc586, type: 3}
       propertyPath: m_Name
       value: Player
