@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 			rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
 			Vector3 flatVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 			float upVel = rb.velocity.y;
-			rb.velocity = inputVec * flatVel.magnitude + upVel * Vector3.up;
+			rb.velocity = orientation.transform.forward * flatVel.magnitude + upVel * Vector3.up;
 		}
 		
 	}

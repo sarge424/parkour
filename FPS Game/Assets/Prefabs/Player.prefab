@@ -200,7 +200,7 @@ MonoBehaviour:
   maxSpeed: 8
   dragValue: 10
   jumpForce: 10
-  airSpeed: 7
+  airSpeed: 6
   maxAirSpeed: 20
   rb: {fileID: 0}
   isGrounded: 0
